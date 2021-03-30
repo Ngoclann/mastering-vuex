@@ -12,7 +12,7 @@ export default new Vuex.Store({
       'animal welfare',
       'housing',
       'education',
-      'food', 
+      'food',
       'community'
     ],
     todos: [
@@ -34,7 +34,7 @@ export default new Vuex.Store({
     catLength: state => {
       return state.categories.length
     },
-    doneTodos: state => { 
+    doneTodos: state => {
       return state.todos.filter(todo => todo.done)
     },
     // activeTodosCount: (state, getters) => {
