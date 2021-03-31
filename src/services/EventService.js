@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const apiClient = axios.create({
-  baseURL: `https://my-json-server.typicode.com/Ngoclann/mastering-vuex`,
+  baseURL: `http://localhost:3000`,
   withCredentials: false, // This is the default
   headers: {
     Accept: 'application/json',
@@ -15,8 +15,5 @@ export default {
   },
   getEvent(id) {
     return apiClient.get('/events/' + id)
-  },
-  postEvent(event) {
-    return apiClient.post('/events', event)
   }
 }

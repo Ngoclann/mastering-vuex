@@ -12,7 +12,7 @@ export default new Vuex.Store({
       'animal welfare',
       'housing',
       'education',
-      'food',
+      'food', 
       'community'
     ],
     todos: [
@@ -28,23 +28,13 @@ export default new Vuex.Store({
       { id: 4, title: '...', organizer: '...' }
     ]
   },
-  mutations: {
-    ADD_EVENT(state, event) {
-      state.events.push(event)
-    }
-  },
-  actions: {
-    createEvent({ commit }, event) {
-      return EventService.postEvent(event).then(() => {
-        commit('ADD_EVENT', event)
-      })
-    }
-  },
+  mutations: {},
+  actions: {},
   getters: {
     catLength: state => {
       return state.categories.length
     },
-    doneTodos: state => {
+    doneTodos: state => { 
       return state.todos.filter(todo => todo.done)
     },
     // activeTodosCount: (state, getters) => {
