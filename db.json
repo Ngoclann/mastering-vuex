@@ -231,6 +231,24 @@
       "date": "",
       "time": "5:00",
       "attendees": []
+    },
+    {
+      "id": 4322679,
+      "user": {
+        "id": "abc123",
+        "name": "Lann"
+      },
+      "category": "community",
+      "organizer": {
+        "id": "abc123",
+        "name": "Lann"
+      },
+      "title": "Catch Pokemon",
+      "description": "catch the biggest cutie Pokemon",
+      "location": "Dong Tac, Dong Da",
+      "date": "2021-03-31T10:12:00.000Z",
+      "time": "19:00",
+      "attendees": []
     }
   ]
 }
