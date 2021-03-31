@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import EventService from '@/services/EventService.js'
 
 Vue.use(Vuex)
 
@@ -21,12 +22,7 @@ export default new Vuex.Store({
       { id: 3, text: '...', done: true },
       { id: 4, text: '...', done: false }
     ],
-    events: [
-      { id: 1, title: '...', organizer: '...' },
-      { id: 2, title: '...', organizer: '...' },
-      { id: 3, title: '...', organizer: '...' },
-      { id: 4, title: '...', organizer: '...' }
-    ]
+    events: []
   },
   mutations: {
     ADD_EVENT(state, event) {

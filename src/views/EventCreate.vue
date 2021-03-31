@@ -26,7 +26,7 @@
       </div>
 
       <h3>Where is your event?</h3>
-      <div class="field">
+      <div class="field"> 
         <label>Location</label>
         <input v-model="event.location" type="text" placeholder="Add a location"/>
       </div>
@@ -72,16 +72,16 @@ export default {
     createEvent() {
       this.$store
         .dispatch('createEvent', this.event)
-        // .then(() => {
-        //   this.$router.push({
-        //     name: 'event-show',
-        //     params: { id: this.event.id }
-        //   })
-        //   this.event = this.createFreshEventObject()
-        // })
-        // .catch(() => {
-        //   console.log('There was a problem creating your event')
-        // })
+        .then(() => {
+          this.$router.push({
+            name: 'event-show',
+            params: { id: this.event.id }
+          })
+          this.event = this.createFreshEventObject()
+        })
+        .catch(() => {
+          console.log('There was a problem creating your event')
+        })
     },
     createFreshEventObject() {
       const user = this.$store.state.user
